@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Competencies } from './components/Competencies';
+import { ArchitectureFlow } from './components/ArchitectureFlow';
 import { Experience } from './components/Experience';
 import { Portfolio } from './components/Portfolio';
 import { AiWorkflows } from './components/AiWorkflows';
@@ -42,7 +43,13 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#0B1120] text-slate-900 dark:text-slate-100 transition-colors duration-200">
+    <div className="min-h-screen bg-slate-50 dark:bg-[#070b14] text-slate-900 dark:text-slate-100 transition-colors duration-200 relative selection:bg-indigo-500/30 selection:text-indigo-200">
+      {/* Background Subtle Tech Grid */}
+      <div 
+        aria-hidden="true" 
+        className="pointer-events-none fixed inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] no-print -z-10"
+      />
+
       {/* Interactive Web Application View (hidden on print) */}
       <div className="no-print">
         <Navbar
@@ -52,8 +59,9 @@ export default function App() {
         />
 
         <main>
-          <Hero />
+          <Hero onOpenCV={() => setShowCVPreview(true)} />
           <Competencies />
+          <ArchitectureFlow />
           <Experience />
           <Portfolio />
           <AiWorkflows />
