@@ -81,21 +81,30 @@ SELECT fn_invalidate_fragment_cache(
   },
   {
     id: 'adwebtest',
-    name: 'Dubai_Deploy.sh',
-    language: 'bash',
-    system: 'AD Web Test Platform (Dubai, UAE)',
-    code: `#!/usr/bin/env bash
-# Production GCC deployment configuration
-export REGION="me-central-uae"
-export DOMAIN="adwebtest.online"
-export TLS_VERSION="1.3"
-
-# Verify HTTP/2 compression and SSL certificate health
-nginx -t && certbot renew --dry-run
-curl -Iv https://\${DOMAIN} --tlsv1.3 | grep -E "HTTP/2|SSL certificate verify ok"
-echo "AD Web Test platform healthy with <80ms TTFB across Dubai/GCC."`,
-    output: `[AD Web Test] TLS 1.3 certificate verified. Nginx HTTP/2 pipeline online.
-[Network] Regional TTFB latency to Dubai client: 62ms.`
+    name: 'DubaiSalonBooking.ts',
+    language: 'typescript',
+    system: 'Online Salon Booking System (Dubai, UAE)',
+    code: `// Dubai Online Salon Booking System — "Book Your Dream Bridal Look In Minutes"
+interface BridalAppointmentEngine {
+  clientRegion: "Dubai, UAE";
+  livePortal: "https://adwebtest.online/";
+  coreProposition: "Book Your Dream Bridal Look In Minutes";
+  serviceCatalog: {
+    category: "Luxury Bridal & Salon Packages";
+    services: [
+      { name: "Signature Royal Bridal Couture Glam", durationMins: 180 },
+      { name: "Pre-Bridal Glow & Skin Rejuvenation", durationMins: 90 },
+      { name: "Couture Hair Artistry & Henna Styling", durationMins: 120 }
+    ];
+  };
+  scheduler: {
+    stylistAllocation: "Auto_Assign_By_Seniority";
+    conflictGuard: "ACID_TRANSACTION_MUTEX";
+    instantAlerts: ["WhatsApp_Direct_Confirmation", "SMS_Reminder"];
+  };
+}`,
+    output: `[Dubai Salon Booking] Verified: "Book Your Dream Bridal Look In Minutes".
+[Scheduler] Bridal appointment slot confirmed on adwebtest.online. WhatsApp trigger fired.`
   }
 ];
 

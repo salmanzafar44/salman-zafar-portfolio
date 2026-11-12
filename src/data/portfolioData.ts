@@ -54,7 +54,7 @@ export const PROFILE = {
   whatsappUrl: "https://wa.me/923429846595?text=Hello%20Salman%2C%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity.",
   linkedin: "https://www.linkedin.com/in/salman-zafar-804a89226",
   github: "https://github.com/salmanzafar44/",
-  currentFocus: "Currently Engineering: LitBench (UK LMS) & Dubai Client Systems",
+  currentFocus: "Currently Engineering: LitBench (UK LMS) & Dubai Online Salon Booking System (\"Book Your Dream Bridal Look In Minutes\")",
   valueProposition: "Architecting, developing, integrating, and deploying scalable enterprise web applications, Learning Management Systems (LMS), SaaS integrations, government REST APIs, and multi-portal publishing platforms for clients across the United Kingdom, Dubai/UAE, India, and Pakistan."
 };
 
@@ -67,8 +67,8 @@ export const GLOBAL_REGIONS = [
   },
   {
     country: "Dubai, UAE",
-    role: "Web Application & Hosting Infrastructure",
-    deliverables: "AD Web Test platform, client infrastructure & production domain/SSL",
+    role: "Online Salon & Bridal Booking System",
+    deliverables: "AD Web Test online booking platform (\"Book Your Dream Bridal Look In Minutes\"), stylist scheduling & hosting",
     flag: "AE"
   },
   {
@@ -207,19 +207,19 @@ export const EXPERIENCES: ExperienceItem[] = [
   },
   {
     id: "adwebtest",
-    role: "Full-Stack Web Engineer & DevOps",
-    organization: "AD Web Test — Dubai Client Web Platform",
+    role: "Full-Stack Web Engineer & System Architect",
+    organization: "Online Booking Salon Services System (Dubai, UAE)",
     location: "Dubai, UAE (Remote)",
-    engagementType: "Client Platform Engagement",
+    engagementType: "Production Salon & Bridal Booking Platform",
     liveUrl: "https://adwebtest.online/",
-    summary: "Develop, deploy, and maintain the AD Web Test web platform for a client based in Dubai, owning end-to-end full-stack implementation, server infrastructure, and domain/SSL provisioning.",
+    summary: "Architected, deployed, and maintain the online booking salon services system (\"Book Your Dream Bridal Look In Minutes\") for a premier Dubai salon client, featuring real-time bridal appointment scheduling, stylist slot availability, custom beauty packages, and cloud hosting.",
     bulletPoints: [
-      "Owned complete lifecycle development from UI mockups to backend schema and deployment on production server infrastructure.",
-      "Configured DNS records, automated SSL certificate renewal, and server-level HTTP/2 optimization for fast regional load times in the GCC.",
-      "Engineered responsive, lightweight front-end views with cross-browser compatibility across mobile and desktop devices.",
-      "Providing ongoing infrastructure monitoring, patch deployment, and client-requested feature additions."
+      "Engineered the core 'Book Your Dream Bridal Look In Minutes' booking engine with step-by-step service selection, stylist availability slots, and calendar reservations.",
+      "Built dynamic service catalog modules for luxury bridal glam, couture hair styling, henna art, and bespoke wedding beauty packages.",
+      "Configured automated appointment confirmation triggers, instant booking status updates, and WhatsApp/SMS alert routing.",
+      "Optimized server-level HTTP/2, Let's Encrypt SSL renewal, and domain infrastructure for sub-second page transitions across the UAE."
     ],
-    techStack: ["PHP", "MySQL", "JavaScript", "Linux Hosting", "DNS / SSL", "REST Endpoints"]
+    techStack: ["PHP", "MySQL", "JavaScript", "Online Booking Engine", "Stylist Calendar Scheduling", "Linux Hosting", "SSL / DNS"]
   },
   {
     id: "buraq-technologies",
@@ -349,22 +349,22 @@ export const PROJECTS: ProjectItem[] = [
   },
   {
     id: "adwebtest-platform",
-    title: "AD Web Test — Dubai Client Platform",
-    subtitle: "High-performance production client web application & hosting",
-    category: ["Dubai / UAE"],
+    title: "Online Booking Salon Services System",
+    subtitle: "Dubai Bridal & Beauty Booking Platform — \"Book Your Dream Bridal Look In Minutes\"",
+    category: ["Dubai / UAE", "E-Commerce & Business Systems"],
     region: "Dubai, UAE",
     status: "In Production",
     liveUrl: "https://adwebtest.online/",
-    summary: "Full-stack production web application developed, deployed, and actively maintained for a client in Dubai. Responsible for end-to-end engineering, database architecture, hosting configuration, and SSL provisioning.",
+    summary: "Full-stack online booking salon services web application engineered for a premier salon client in Dubai, UAE. Centered on the core proposition 'Book Your Dream Bridal Look In Minutes', the system automates client inquiries, bridal service reservations, stylist schedule allocation, and instant appointment confirmations.",
     architecturalHighlights: [
-      "Full lifecycle execution: requirements specification, database modeling, frontend implementation, and cloud deployment",
-      "Optimized server-side request pipelines and gzip/brotli compression for rapid regional load speeds across the UAE",
-      "Automated domain DNS routing, Let's Encrypt SSL renewal, and server firewall hardening",
-      "Responsive, touch-friendly UI optimized across iOS Safari and Android Chrome viewports"
+      "Streamlined multi-step bridal booking flow allowing clients to 'Book Your Dream Bridal Look In Minutes' with real-time slot selection",
+      "Granular service catalog management supporting bridal packages, hair styling, couture makeup, and treatment durations",
+      "Stylist calendar allocation algorithm preventing overlapping appointments and double-booking conflicts",
+      "High-performance responsive interface tailored for luxury beauty clients on mobile Safari and Chrome across the GCC"
     ],
-    databaseArchitecture: "Optimized MySQL database structured for low-latency CRUD operations and secure credential storage.",
-    keyIntegrations: ["DNS & SSL Infrastructure", "Linux Server Daemons", "Automated Backup Scripts"],
-    techStack: ["PHP", "MySQL", "JavaScript", "Linux Hosting", "Apache/Nginx", "SSL/TLS"]
+    databaseArchitecture: "Relational schema maintaining service tiers, stylist working hours, bridal booking slots, client contact records, and appointment statuses.",
+    keyIntegrations: ["Automated Appointment Reminders", "Stylist Slot Availability Engine", "DNS & SSL Infrastructure"],
+    techStack: ["PHP", "MySQL", "JavaScript", "Booking Engine Architecture", "Linux Hosting", "SSL/TLS"]
   },
   {
     id: "psip-lms",
